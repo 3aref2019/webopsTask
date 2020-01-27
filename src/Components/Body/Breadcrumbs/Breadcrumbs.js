@@ -1,26 +1,34 @@
-import React, { useState } from 'react';
- 
-import { Button } from 'styled-button-component';
+import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
+
 import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-} from 'styled-dropdown-component';
+  Breadcrumb,
+  BreadcrumbItem,
+} from 'styled-breadcrumb-component';
  
-export const SimpleDropdown = () => {
-  const [hidden, setHidden] = useState(true);
- 
-  return (
-    <Dropdown>
-      <Button dropdownToggle onClick={() => setHidden(!hidden)}>
-        Dropdown Button
-      </Button>
-      <DropdownMenu hidden={hidden} toggle={() => setHidden(!hidden)}>
-        <DropdownItem>Action</DropdownItem>
-        <DropdownItem>Another action</DropdownItem>
-        <DropdownDivider />
-        <DropdownItem>Action after divider</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
-  );
+
+
+
+ class Breadcrumbs extends Component {
+
+  render() {
+    return (
+      
+        <Breadcrumb>
+          <BreadcrumbItem>
+            <a href="#">Home</a>
+          </BreadcrumbItem>
+          <BreadcrumbItem>
+            <a href="#">Library</a>
+          </BreadcrumbItem>
+          <BreadcrumbItem active>
+            Data
+          </BreadcrumbItem>
+        </Breadcrumb>
+     
+    )
+  }
 }
+
+
+export default Breadcrumbs

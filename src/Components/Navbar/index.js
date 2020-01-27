@@ -7,7 +7,7 @@ class Navbar extends Component {
         return (
             <div>
                 <Basic />
-                <Changed />
+                <Changed /> 
             </div>
         )
     }
