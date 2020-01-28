@@ -1,21 +1,29 @@
 import React from 'react';
 import './App.css';
-import Navbar from './Components/Navbar/index';
-import Footer from './Components/Footer/index';
-import Breadcrumbs from './Components/Body/Breadcrumbs/Breadcrumbs'
-import Middle from './Components/Body/middle/Middle'
-import Third from './Components/Body/thirdpart/Third'
-import LeftComponent from './Components/Body/leftc/LeftComponent' 
+import { BrowserRouter , Route ,Switch} from 'react-router-dom'; 
+import Home from './Components/pages/Home'
+import Categories from './Components/pages/Categories'
+import Category from './Components/pages/Category'
+import Photo from './Components/pages/Photo'
+
 function App() {
   return (
+    
+    <BrowserRouter>
     <div className="App">
-  <Navbar />
-  <Breadcrumbs />
-  <LeftComponent />
-  <Middle />
- <Third />
-  <Footer />
+  
+      <Switch>
+      <Route exact path='/home' component={Home} />
+      <Route path='/categories' component={Categories} />
+
+      <Route path="/:category_id" component={Category} />
+      <Route path="/:photo_id" component={Photo} />
+      </Switch>
+     
+
     </div>
+    </BrowserRouter>
+    
   );
 }
 

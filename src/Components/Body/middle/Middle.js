@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
+import Paginations from '../Paginations'
+
 
 const Paragraph = styled.p`
 flex-basis:auto;
@@ -20,6 +22,7 @@ display: flex;
     render() {
         return (
           <Container>
+              <Paginations />
               <Paragraph>WEDDING PLANNING IS A PIECE OF CAKE WITH WEDS360. WE KNOW WHAT MATTERS MOST AND YOU CAN COUNT ON US EVERY STEP OF THE WAY.</Paragraph>
           </Container>
         )
